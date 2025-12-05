@@ -9,11 +9,11 @@ import cv2
 import numpy as np
 from pathlib import Path
 
-# Add the current directory to Python path to import from main_v3
+# Add the current directory to Python path to import from main
 sys.path.append('.')
 
 # Import the scaling utilities
-from main_v3 import (
+from main import (
     calculate_optimal_dimensions, 
     gpu_scale_image, 
     parse_scale_string,
@@ -113,7 +113,7 @@ def test_image_folder_processing():
     test_dir = create_test_images()
     
     # Test recursive vs non-recursive search
-    from main_v3 import DetectionGUI
+    from main import DetectionGUI
     
     # Create a minimal GUI instance for testing
     try:
